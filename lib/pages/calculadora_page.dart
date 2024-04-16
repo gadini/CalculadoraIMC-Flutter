@@ -18,6 +18,7 @@ class CalculadoraPage extends StatefulWidget {
 class _CalculadoraPageState extends State<CalculadoraPage> {
   //M = 1, F = 2;
   int generoSelecionado = 0;
+  int altura = 120;
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +68,14 @@ class _CalculadoraPageState extends State<CalculadoraPage> {
             ),
           ),
           Expanded(
-            child: SliderAltura(),
+            child: SliderAltura(
+              altura: altura,
+              onChanged: (double novaAltura){
+                setState(() {
+                  altura = novaAltura.toInt();
+                });
+              },
+            ),
           ),
           Expanded(
             child: Row(
