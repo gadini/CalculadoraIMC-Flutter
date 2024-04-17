@@ -81,10 +81,16 @@ class _CalculadoraPageState extends State<CalculadoraPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: Contador(),
+                  child: Contador(
+                    titulo: 'Peso',
+                    valorInicial: 10,
+                  ),
                 ),
                 Expanded(
-                  child: Contador(),
+                  child: Contador(
+                    titulo: 'Idade',
+                    valorInicial: 1,
+                  ),
                 ),
               ],
             ),

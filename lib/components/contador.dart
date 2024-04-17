@@ -2,19 +2,21 @@ import '../constants.dart';
 import 'package:flutter/material.dart';
 
 class Contador extends StatelessWidget {
-  const Contador({super.key});
+  final String titulo;
+  final int valorInicial;
+  const Contador({super.key, required this.titulo, required this.valorInicial});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text(
-          '?',
+        Text(
+          titulo,
           style: labelTextStyle,
         ),
-        const Text(
-          '80',
+         Text(
+           valorInicial.toString(),
           style: numberTextStyle,
         ),
         Row(
